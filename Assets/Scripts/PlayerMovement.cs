@@ -87,4 +87,4 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("MoveSpeed", horizontalSpeed);
         anim.SetBool("Grounded", isGrounded);
     }
-}
+}

@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class TrapMovement : MonoBehaviour
 {
-    public float speed = 2f;             // Hareket hýzý
-    public float moveDistance = 2f;      // Yukarý–aþaðý mesafe
+    public float speed = 2f;          
+    public float moveDistance = 2f;     
 
     private Vector3 startPos;
     private bool goingUp = true;

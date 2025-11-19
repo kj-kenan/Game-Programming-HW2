@@ -8,17 +8,16 @@ public class SwingTrap : MonoBehaviour
     private float angle = 0f;
     private bool forward = true;
 
-    private Quaternion startRot; // baþlangýç rotasyonu
+    private Quaternion startRot; 
 
     void Start()
     {
-        // Oyun baþlarken sahnedeki rotasyonu kaydet
         startRot = transform.localRotation;
     }
 
     void Update()
     {
-        // Sallanma yönüne göre açýyý artýr/azalt
+
         if (forward)
         {
             angle += speed * Time.deltaTime;
@@ -28,7 +27,6 @@ public class SwingTrap : MonoBehaviour
             angle -= speed * Time.deltaTime;
         }
 
-        // Limitlere geldiðinde yön deðiþtir
         if (angle > swingAngle)
         {
             forward = false;
@@ -38,7 +36,6 @@ public class SwingTrap : MonoBehaviour
             forward = true;
         }
 
-        // Baþlangýç rotasyonunun ÜSTÜNE sallanma açýsý ekle
         transform.localRotation = startRot * Quaternion.Euler(0, 0, angle);
     }
 }
